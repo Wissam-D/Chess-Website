@@ -1,0 +1,124 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&family=Rubik&family=Satisfy&display=swap');/* root */
+:root {
+    --standard-white: rgba(240,240,240,0.9);
+    --main-font: 'Poppins', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+    --fancy-font: 'Satisfy', sans-serif;
+}
+body {
+    margin: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+}
+/* navbar */
+.navbar {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    column-gap: 20%;
+    font-family: var(--main-font);
+}
+.navlink-container {
+    height: inherit;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    column-gap: 10%;
+}
+.logo-container {
+    height: inherit;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3vw;
+    color: var(--standard-white);
+}
+.navlink {
+    text-decoration: none;
+    font-size: 3.5vh;
+    color: var(--standard-white);
+}
+.navlink:hover {
+    cursor: pointer;
+}
+.mobile-toggle {
+    display: none;
+}
+.sr-only {
+    display: none;
+}
+
+/* decoration */
+.art-deco-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.art-deco-container > * {
+    background-color: rgba(200, 200, 200, 0.05);
+    position: absolute;
+}
+.art-deco-container > *:nth-child(1) {
+    width: 35rem;
+    height: 32rem;
+    inset: 30% 0 0 -20%;
+    border-radius: 87% 13% 69% 31% / 18% 92% 8% 82%;
+}
+.art-deco-container > *:nth-child(2) {
+    width: 15rem;
+    height: 17rem;
+    inset: 20% 0 0 90%;
+    border-radius: 87% 13% 69% 31% / 18% 92% 8% 82%;
+}
+.art-deco-container > *:nth-child(3) {
+    width: 28rem;
+    height: 30rem;
+    inset: 80% 0 0 60%;
+    border-radius: 15% 70% 0% 100% / 90% 25% 95% 10%;
+}
+
+/* mobile toggle for smaller screens */
+@media (max-width: 900px) {
+    .mobile-toggle {
+        display: inline-block;
+        z-index: 5000;
+        position: absolute;
+        top: 2.3rem;
+        right: 4rem;
+        width: 2rem;
+        aspect-ratio: 1;
+        border: 0;
+        background-image: url(assets/icon-hamburger.png);
+        background-size: cover;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .navlink-container {
+        background-color: var(--standard-white);
+
+        width: 90%;
+        height: 100%;
+
+        position: fixed;
+        inset: 0 0 0 10%;
+
+        flex-direction: column;
+        row-gap: 5%;
+        align-items: center;
+        justify-content: center;
+
+        transform: translateX(100%);
+        transition: transform 800ms ease-in-out;
+        z-index: 3000;
+    }
+    .navlink {
+        color: rgb(0, 0, 0);
+    }
+    .navlink-container[data-visible="true"] {
+        transform: translateX(0%);
+    }
+}
