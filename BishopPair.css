@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&family=Rubik&family=Satisfy&display=swap');/* root */
+:root {
+    --standard-white: rgba(240,240,240,0.9);
+    --accent-dark: rgba(0,0,0,0.8);
+    --comp-brown: rgb(49, 35, 35);
+    --main-font: 'Poppins', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+}
+body {
+    margin: 0;
+    width: 100%;
+    height: 34rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-dark);
+    font-family: var(--main-font);
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+
+    padding: 2rem;
+    background-color: var(--standard-white);
+    width: 30%;
+    height: fit-content;
+    border-radius: 20px;
+
+}
+.card-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.card-form > * {
+    width: 50%;
+}
+.card-form > *, .submit-button {
+    border: none;
+    background: none;
+    outline: none;
+}
+.button-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+.submit-button {
+    border-radius: 20px;
+    border: 2px solid var(--accent-dark);
+    width: 50%;
+}
+.submit-button:hover {
+    border: 2px solid var(--comp-brown);
+    background-color: var(--comp-brown);
+    color: var(--standard-white);
+    cursor: pointer;
+
+}
+.card-subtitle:hover {
+    color: var(--comp-brown);
+    cursor: pointer;
+}
