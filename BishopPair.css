@@ -28,6 +28,11 @@ body {
     border-radius: 20px;
 
 }
+.card-subtitle:hover {
+    color: var(--comp-brown);
+    cursor: pointer;
+}
+/* form css */
 .card-form {
     display: flex;
     flex-direction: column;
@@ -35,18 +40,24 @@ body {
 }
 .card-form > * {
     width: 50%;
+    border: 1px solid var(--comp-brown);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
 }
 .card-form > *, .submit-button {
-    border: none;
     background: none;
     outline: none;
 }
-.button-container {
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
+.card-form>*:nth-child(1) {
+    display: none;
 }
+.card-form>*:nth-child(1)[data-visible="true"] {
+    display: inline-block;
+}
+
+/* button css */
 .submit-button {
     border-radius: 20px;
     border: 2px solid var(--accent-dark);
@@ -59,7 +70,8 @@ body {
     cursor: pointer;
 
 }
-.card-subtitle:hover {
-    color: var(--comp-brown);
-    cursor: pointer;
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

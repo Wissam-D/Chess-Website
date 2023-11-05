@@ -6,15 +6,16 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="BishopPair.css">
     <link rel="icon" href="assets/white-pawn.svg">
+    <script src="BishopPair.js" defer></script>
 </head>
 <body>
     <div class="card-container">
         <div class="card-header">
             <h1 class="card-title"> Log In</h1>
-            <a class="card-subtitle" id="toggle-modes"> Don't have an account ? </a>
+            <a class="card-subtitle" id="toggle-mode"> Don't have an account ? </a>
         </div>
         <div class="card-form">
-            <input type="text" placeholder="gmail">
+            <input type="text" placeholder="gmail" data-visible="false" id="toggled-form">
             <input type="text" placeholder="username">
             <input type="password" placeholder="password">
         </div>
